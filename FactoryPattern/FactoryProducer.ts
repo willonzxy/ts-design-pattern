@@ -2,6 +2,9 @@
  * https://www.runoob.com/design-pattern/factory-pattern.html
  * 工厂模式中着重介绍的是这种通过某个特定的参数，让你一个接口去干对应不同的事而已！而不是调用者知道了类！
  * 属于创建模式，解决子类创建问题的
+ * 
+ * 何时使用：我们明确地计划不同条件下创建不同实例时。
+ * 
  */
 
 interface Shape {
@@ -44,10 +47,6 @@ class ShapeFactory {
     }
 }
 
-// usage
-
-let shapeFactory: ShapeFactory = new ShapeFactory();
-
-let shape1:Shape = shapeFactory.getShape('Circle');
-
-shape1.draw();
+export {
+    ShapeFactory
+}
